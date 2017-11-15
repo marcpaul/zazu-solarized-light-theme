@@ -1,0 +1,17 @@
+{
+  "name": "zazu-solarized-dark-theme",
+  "version": "1.0.1",
+  "description": "A solarized inspired, dark theme for Zazu.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "author": "marcpaul",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inline-image": "0.0.5",
+    "gulp-sass": "^2.3.1"
+  }
+}

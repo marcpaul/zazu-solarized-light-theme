@@ -1,0 +1,158 @@
+$color-primary:   #073642;
+$color-secondary: #002b36;
+$color-bright: #fdf6e3;
+$color-preview-background: #eee8d5;
+$color-result: #268bd2;
+$color-hover-background: rgba(210, 54, 130, 0.9);
+$color-near-transparent: rgba(0, 0, 0, .1);
+
+$transparency: .1;
+$gutter: 20px;
+$transition-speed: .3s;
+$radius: 2px;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  overflow: hidden;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+section#zazu {
+  background-position: 530px 5px;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  -webkit-app-region: drag;
+  cursor: move;
+  border: 1px solid $color-near-transparent;
+  border-radius: $radius;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  box-shadow: 0 0 0;
+
+  > div {
+    background: $color-primary;
+    border-radius: $radius;
+  }
+
+  input {
+    outline: none;
+    font-size: 40px;
+    width: 500px;
+    padding: 15px 20px;
+    border: 0;
+    cursor: auto;
+    width: 100%;
+    color: $color-bright;
+    background: transparent;
+    -webkit-app-region: no-drag;
+  }
+
+  iframe#preview {
+    border: 0;
+    background: $color-preview-background;
+    box-shadow: inset 2px 2px 4px $color-near-transparent;
+  }
+
+  div.results {
+    display: flex;
+    flex-direction: row;
+    background: $color-primary;
+    border-radius: 0 0 $radius $radius;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      max-height: 310px;
+      overflow-y: hidden;
+      width: 50%;
+
+      &:last-child {
+        width: 100%;
+      }
+
+      + div {
+        width: 50%;
+      }
+
+      li {
+        display: block;
+        border-bottom: 1px solid $color-secondary;
+        -webkit-app-region: no-drag;
+        cursor: pointer;
+        width: 100%;
+        padding: 15px 10px;
+        transition: all $transition-speed ease;
+        @extend %clearfix;
+
+        .icon {
+          text-align: center;
+          line-height: 30px;
+          height: 45px;
+          width: 45px;
+          padding: 5px;
+          float: left;
+        }
+
+        h2, h3 {
+          margin: 0;
+          padding-left: 10px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 400;
+        }
+
+        h2 {
+          font-size: 20px;
+          line-height: 25px;
+          color: $color-result;
+          &:last-child {
+            font-size: 20px;
+            line-height: 45px;
+          }
+        }
+
+        h3 {
+          font-weight: normal;
+          font-size: 15px;
+          color: $color-result;
+        }
+
+        &:hover, &.active {
+          background: $color-hover-background;
+          border-bottom: 1px solid $color-near-transparent;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+
+        &:first-child {
+          border-top: 1px solid $color-near-transparent;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

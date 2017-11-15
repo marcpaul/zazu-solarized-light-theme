@@ -1,0 +1,7 @@
+{
+  "name": "zazu-solarized-dark-theme",
+  "version": "1.0.1",
+  "author": "marcpaul",
+  "description": "A solarized inspired, dark theme for Zazu",
+  "stylesheet": "dist/main.css"
+}
