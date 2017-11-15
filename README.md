@@ -6,7 +6,11 @@ A solarized inspired, light theme for Zazu.
 
 #### Main view
 
+![Screenshot](/images/solarized_light_1.png)
+
 #### Clipboard View
+
+![Screenshot](/images/solarized_light_2.png)
 
 ## Installing
 
