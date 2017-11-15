@@ -42,7 +42,7 @@ section#zazu {
     -webkit-app-region: no-drag; }
   section#zazu iframe#preview {
     border: 0;
-    background: #cb4b16;
+    background: #6c71c4;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1); }
   section#zazu div.results {
     display: flex;
