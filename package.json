@@ -8,10 +8,14 @@
   },
   "author": "marcpaul",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcpaul/zazu-solarized-light-theme.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-inline-image": "0.0.5",
-    "gulp-sass": "^2.3.1"
+    "gulp-inline-image": "^1.0.0",
+    "gulp-sass": "^3.1.0"
   }
 }
